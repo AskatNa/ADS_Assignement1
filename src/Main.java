@@ -1,16 +1,18 @@
-import java.util.*;
 import java.util.Scanner;
 
 public class Main {
-    public static int SumOfSquares(int b,int n) {
-        if(n == 0) {
-            return 1;
-        }else{
-            return (int) Math.pow(b,n) + SumOfSquares(b,n - 1);
+    public static void ReverseOrder(int n) {
+        if (n == 0) {
+            return;
         }
+        Scanner scanner = new Scanner(System.in);
+        String enter = scanner.nextLine();
+        ReverseOrder(n - 1);
+        System.out.println(enter);
     }
     public static void main(String[] args) {
-        int  result = SumOfSquares(4,3);
-        System.out.println("Result: " + result);
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        ReverseOrder(n);
     }
 }
