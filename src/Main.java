@@ -12,5 +12,6 @@ public class Main {
     public static void main(String[] args) {
         int  result = SumOfSquares(4);
         System.out.println("Result: " + result);
+
     }
 }
