@@ -2,17 +2,15 @@ import java.util.*;
 import java.util.Scanner;
 
 public class Main {
-    public static int SumOfPositive(int n){
-        if(n < 0){
-            return -1;
-        }
-        else{
-            return n + SumOfPositive(n - 1);
+    public static int SumOfSquares(int b,int n) {
+        if(n == 0) {
+            return 1;
+        }else{
+            return (int) Math.pow(b,n) + SumOfSquares(b,n - 1);
         }
     }
     public static void main(String[] args) {
-        int result = SumOfPositive(4);
-        System.out.println(result);
-
+        int  result = SumOfSquares(4,3);
+        System.out.println("Result: " + result);
     }
 }
