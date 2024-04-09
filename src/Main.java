@@ -1,19 +1,22 @@
 import java.util.Scanner;
 
 public class Main {
-    static int arr[] = { 1, 2, 3, 4, 5, 6 };
-
-    // Return sum of elements in A[0..N-1] 
-    // using recursion. 
-    static int findSum(int A[], int N)
-    {
-        if (N <= 0)
-            return 0;
-        return (findSum(A, N - 1) + A[N - 1]);
+    public static void isPowerOfTwo(int n) {
+        if (n <= 0) {
+            System.out.println("Can`t be negative");
+        } else if (n == 1) {
+            System.out.println("Power of two");
+        } else if (n % 2 == 0) {
+            System.out.println("Power of two");
+        } else {
+            System.out.println("Not the power of two");
+        }
     }
 
-    // Driver method 
     public static void main(String[] args) {
-        System.out.println(findSum(arr, arr.length));
+        Scanner scanner = new Scanner(System.in);
+        int number = scanner.nextInt();
+        isPowerOfTwo(number);
+
     }
-} 
+}
